@@ -1,0 +1,16 @@
+.navbar-cor {
+    background-color: #3EB595;
+}
+
+.fs-15 {
+    font-size: 15pt;
+}
+
+.icon-edit {
+    filter: grayscale(100%);
+    filter:invert(100%);
+}
+
+a{
+    cursor: pointer;
+}
