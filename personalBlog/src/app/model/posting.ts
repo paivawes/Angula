@@ -1,12 +1,13 @@
-import { person } from "./person"
-import { theme } from "./theme"
+import { Person } from "./Person"
+import { Theme } from "./Theme"
 
-export class posting{
+
+export class Posting{
 
     public idPosting: number
     public title: string
 	public text: string
-    public myPosting: person
-    public themePosting: theme
+    public myPosting: Person
+    public themePosting: Theme
 
 }

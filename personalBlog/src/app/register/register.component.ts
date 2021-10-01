@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { Person } from "../model/Person";
+
+
+
 
 @Component({
   selector: 'app-register',
@@ -6,10 +10,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+  
+  user: Person = new Person
+  confirmPass: string
+  typeUser: string
+ 
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    window.scroll(0,0)
+    
+  }
+
+  confirmPassword(event: any){
+    this.confirmPass = event.targe.value
+  }
+
+  userType(event: any){
+    this.typeUser = event.targe.value
+   }
+
+  confirmPerfil(){
+    
   }
 
 }

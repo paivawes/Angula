@@ -1,8 +1,9 @@
-import { posting } from "./posting"
+import { Posting } from "./Posting"
 
-export class theme{
+
+export class Theme{
 
     public idTheme: number
     public description: string
-    public themePosting: posting []
+    public themePosting: Posting []
 }

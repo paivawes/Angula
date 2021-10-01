@@ -1,6 +1,7 @@
-import { posting } from "./posting"
+import { Posting } from "./Posting"
 
-export class person {
+
+export class Person {
 
     public idUser: number
     public name: string
@@ -8,5 +9,5 @@ export class person {
     public password: string
     public photo: string
     public userType: string
-    public myPosting: posting []
+    public myPosting: Posting []
 }
