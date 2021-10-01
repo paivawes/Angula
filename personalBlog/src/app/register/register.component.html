@@ -13,17 +13,17 @@
 
                     <div class="form-group">
                         <label for="name">Nome</label>
-                        <input type="text" name="name" id="name" placeholder="your name" >
+                        <input [(ngModel)]="person.name" type="text" name="name" id="name" placeholder="your name" >
                     </div>
 
                     <div class="form-group">
                         <label for="user">Usuário</label>
-                        <input class="form-control" type="text" name="user" id="user" placeholder="your user">
+                        <input [(ngModel)]="person.username" class="form-control" type="text" name="user" id="username" placeholder="your user">
                     </div>
 
                     <div class="form-group">
                         <label for="password">Senha</label>
-                        <input class="form-control" type="password" name="password" id="password" placeholder="your password">
+                        <input  class="form-control" type="password" name="password" id="password" placeholder="your password">
                     </div>
 
                     <div class="form-group">

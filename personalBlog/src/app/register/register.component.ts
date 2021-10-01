@@ -11,7 +11,7 @@ import { Person } from "../model/Person";
 })
 export class RegisterComponent implements OnInit {
   
-  user: Person = new Person
+  person: Person = new Person
   confirmPass: string
   typeUser: string
  
