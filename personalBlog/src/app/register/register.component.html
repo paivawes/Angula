@@ -13,7 +13,7 @@
 
                     <div class="form-group">
                         <label for="name">Nome</label>
-                        <input [(ngModel)]="person.name" type="text" name="name" id="name" placeholder="your name" >
+                        <input [(ngModel)]="person.name" class="form-control" type="text" name="name" id="name" placeholder="your name" >
                     </div>
 
                     <div class="form-group">
@@ -23,17 +23,17 @@
 
                     <div class="form-group">
                         <label for="password">Senha</label>
-                        <input  class="form-control" type="password" name="password" id="password" placeholder="your password">
+                        <input (input)="confirmPassword($event)"  class="form-control" type="password" name="password" id="password" placeholder="your password">
                     </div>
 
                     <div class="form-group">
                         <label for="rpassword">Confirmar senha</label>
-                        <input class="form-control" type="rpassword" name="rpassword" id="rpassword" placeholder="repeat your password">
+                        <input [(ngModel)]="person.password" class="form-control" type="password" name="rpassword" id="password" placeholder="repeat your password">
                     </div>
 
                     <div class="form-group">
                         <label for="picture">Link da foto</label>
-                        <input class="form-control" type="link" name="picture" id="picture" placeholder="your picture">
+                        <input [(ngModel)]="person.photo" class="form-control" type="link" name="picture" id="picture" placeholder="your picture">
                     </div>
 
                     <div class="form-group">
@@ -47,7 +47,7 @@
 
                     <div class="d-flex justify-content-center">
                         <button type="submit" class="btn btn-danger mr-3" routerLink="/login"> Cancelar </button>
-                        <button type="submit" class="btn btn-success ml-3"> Cadastrar </button>
+                        <button type="submit" class="btn btn-success ml-3" (click)="createUser()" > Cadastrar </button>
                     </div>
                 </div>
 

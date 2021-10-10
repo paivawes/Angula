@@ -17,12 +17,12 @@ export class AuthService {
   ) { }
 
   login(userLogin: UserLogin): Observable<UserLogin>{
-    return this.http.post<UserLogin>('https://wespaiva.herokuapp.com/user/login', userLogin)
+    return this.http.post<UserLogin>('https://blogwes.herokuapp.com/user/login', userLogin)
 
   }
 
   register(person: Person):Observable<Person>{
-    return this.http.post<Person>('https://wespaiva.herokuapp.com/user/register', person)
+    return this.http.post<Person>('https://blogwes.herokuapp.com/user/register', person)
 
   }
 

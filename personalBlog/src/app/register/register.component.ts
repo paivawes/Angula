@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 import { Person } from "../model/Person";
+import { AuthService } from "../service/auth.service";
 
 
 
@@ -16,7 +18,10 @@ export class RegisterComponent implements OnInit {
   typeUser: string
  
 
-  constructor() { }
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ) { }
 
   ngOnInit(){
     window.scroll(0,0)
@@ -24,15 +29,26 @@ export class RegisterComponent implements OnInit {
   }
 
   confirmPassword(event: any){
-    this.confirmPass = event.targe.value
+    this.confirmPass = event.target.value
   }
 
   userType(event: any){
-    this.typeUser = event.targe.value
+    this.typeUser = event.target.value
    }
 
-  confirmPerfil(){
-    
+  createUser(){
+    this.person.userType = this.typeUser
+
+    if(this.person.password != this.confirmPass){
+      alert("As senhas não são iguais")
+    } else{
+      this.authService.register(this.person).subscribe((resp: Person) => {
+        this.person = resp
+        this.router.navigate(["/login"])
+        alert("Usuário cadastrado com sucesso!")
+      })
+    }
+
   }
 
 }
